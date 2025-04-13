@@ -52,6 +52,7 @@ const PasswordReset = () => {
       await confirmPasswordReset(auth, oobCode, newPassword);
       setSuccess(true);
     } catch (err) {
+      console.error(err);
       setError("Failed to reset password. Please try again.");
     } finally {
       setLoading(false);
